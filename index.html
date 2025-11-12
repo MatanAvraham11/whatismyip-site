@@ -8,7 +8,24 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IP Finder</title>
+    <title>מה הIP שלי - גלה את כתובת ה-IP שלך בזמן אמת | IP Finder</title>
+    <meta name="description" content="גלה את כתובת ה-IP שלך, סוג המכשיר, דפדפן ומערכת הפעלה. כלי חינמי לבדיקת IP, מידע על VPN, וטיפים לאבטחת מידע ברשת." />
+    <meta name="keywords" content="IP, כתובת IP, מה הIP שלי, בדיקת IP, IPv4, IPv6, VPN, אבטחת מידע, פרטיות ברשת" />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:title" content="מה הIP שלי - גלה את כתובת ה-IP שלך בזמן אמת" />
+    <meta property="og:description" content="גלה את כתובת ה-IP שלך, סוג המכשיר, דפדפן ומערכת הפעלה. כלי חינמי לבדיקת IP ומידע על אבטחת מידע ברשת." />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourdomain.com/" />
+    <meta property="twitter:title" content="מה הIP שלי - גלה את כתובת ה-IP שלך בזמן אמת" />
+    <meta property="twitter:description" content="גלה את כתובת ה-IP שלך, סוג המכשיר, דפדפן ומערכת הפעלה. כלי חינמי לבדיקת IP ומידע על אבטחת מידע ברשת." />
+    <meta property="twitter:image" content="https://yourdomain.com/og-image.jpg" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +34,22 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "מה הIP שלי",
+      "alternateName": "IP Finder",
+      "url": "https://yourdomain.com/",
+      "description": "כלי חינמי לבדיקת כתובת IP, מידע על VPN, וטיפים לאבטחת מידע ברשת",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -29,9 +62,8 @@
 
     <main class="hero">
       <section class="ip-card">
-        <p class="eyebrow">הכתובת שלך כרגע</p>
         <div class="ip-row">
-          <h1 id="ip-address">—</h1>
+          <h1>מה הIP שלי? <span id="ip-address">—</span></h1>
           <button class="copy-domain" type="button" aria-label="העתקת הדומיין">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -88,23 +120,12 @@
           </p>
         </article>
       </section>
-
-      <section class="ads">
-        <div class="ad-slot">
-          <span>שטח פרסום</span>
-          <small>300 × 250</small>
-        </div>
-        <div class="ad-slot">
-          <span>שטח פרסום</span>
-          <small>300 × 250</small>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <small>© <span id="year"></span> IP Finder. כל הזכויות שמורות.</small>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
