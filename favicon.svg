@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2a44" />
+      <stop offset="100%" stop-color="#3a6ff7" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#g)" />
+  <g transform="translate(32 32)">
+    <g transform="scale(1.25)">
+      <text
+        x="0"
+        y="0"
+        fill="#f5f7ff"
+        font-family="Rubik, 'Segoe UI', sans-serif"
+        font-size="24"
+        font-weight="700"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        letter-spacing="0.8"
+      >
+        IP
+      </text>
+    </g>
+  </g>
+</svg>
