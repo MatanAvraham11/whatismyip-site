@@ -190,6 +190,43 @@ nav a:hover {
   margin: 0;
 }
 
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.info-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
 .info {
   display: grid;
   gap: 2rem;
@@ -380,5 +417,14 @@ nav a:hover {
   .ip-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+  
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .info-card {
+    padding: 0.875rem;
   }
 }
