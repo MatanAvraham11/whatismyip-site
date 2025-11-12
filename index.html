@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">מה הIP שלי</a>
+      <nav>
+        <a href="index.html">דף הבית</a>
+        <a href="blog.html">בלוג</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="ip-card">
+        <p class="eyebrow">הכתובת שלך כרגע</p>
+        <div class="ip-row">
+          <h1 id="ip-address">—</h1>
+          <button class="copy-domain" type="button" aria-label="העתקת הדומיין">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+              />
+            </svg>
+            <span class="sr-only">העתק דומיין</span>
+          </button>
+        </div>
+        <p class="subtext">מביאים לך שקיפות ברשת, בזמן אמת.</p>
+      </section>
+
+      <section class="info">
+        <article>
+          <h2>מהי כתובת IP?</h2>
+          <p>
+            כתובת IP היא מספר ייחודי שמזהה את המכשיר שלך מול שאר המכשירים המחוברים לאינטרנט
+            או לרשת פרטית. בדומה לכתובת דואר, היא מאפשרת לנתונים להגיע למקום הנכון וחזרה.
+          </p>
+          <p>
+            קיימות שתי גרסאות עיקריות: IPv4 הוותיקה והנפוצה, ו-IPv6 המודרנית שנועדה לתת מענה
+            לכמות המכשירים האדירה בעולם. כל פניה לאתר, שירות ענן או אפליקציה עוברת דרך כתובת
+            ה-IP שלך.
+          </p>
+        </article>
+
+        <article>
+          <h2>מה זה VPN ולמה הוא משמש?</h2>
+          <p>
+            VPN (Virtual Private Network) יוצר חיבור מוצפן בין המכשיר שלך לבין שרת מרוחק.
+            כשאתה משתמש ב-VPN, התעבורה עובר דרך השרת הזה ולכן אתרים ושירותים רואים את כתובת ה-IP
+            של השרת ולא את שלך. כך ניתן להגן על פרטיות, לעקוף חסימות גיאוגרפיות ולהגן על מידע
+            רגיש ברשתות ציבוריות.
+          </p>
+          <p>
+            חברות וארגונים משתמשים ב-VPN כדי לאפשר לעובדים גישה מאובטחת למשאבים פנימיים, בעוד
+            משתמשים פרטיים בוחרים בו כדי לקבל שכבת פרטיות נוספת ותחושת שליטה על הנראות שלהם
+            ברשת.
+          </p>
+        </article>
+      </section>
+
+      <section class="ads">
+        <div class="ad-slot">
+          <span>שטח פרסום</span>
+          <small>300 × 250</small>
+        </div>
+        <div class="ad-slot">
+          <span>שטח פרסום</span>
+          <small>300 × 250</small>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="year"></span> IP Finder. כל הזכויות שמורות.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
