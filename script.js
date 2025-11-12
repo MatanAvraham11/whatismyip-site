@@ -20,40 +20,19 @@
       }
 
       try {
-        // Try modern clipboard API
+        // Use modern clipboard API
         if (navigator.clipboard && navigator.clipboard.writeText) {
           await navigator.clipboard.writeText(ipValue);
           copyButton.classList.add('success');
           setTimeout(() => copyButton.classList.remove('success'), 1500);
         } else {
-          // Fallback for older browsers
-          throw new Error('Clipboard API not available');
+          console.warn('Clipboard API not available');
+          // Show user-friendly message if clipboard is not available
+          alert('העתקה לא זמינה בדפדפן זה. אנא העתיקו ידנית: ' + ipValue);
         }
       } catch (err) {
-        console.error('Copy failed, trying fallback', err);
-        // Fallback method for older browsers
-        try {
-          const textArea = document.createElement('textarea');
-          textArea.value = ipValue;
-          textArea.style.position = 'fixed';
-          textArea.style.left = '-9999px';
-          textArea.style.top = '0';
-          document.body.appendChild(textArea);
-          textArea.focus();
-          textArea.select();
-          
-          const successful = document.execCommand('copy');
-          document.body.removeChild(textArea);
-          
-          if (successful) {
-            copyButton.classList.add('success');
-            setTimeout(() => copyButton.classList.remove('success'), 1500);
-          } else {
-            console.error('Fallback copy command failed');
-          }
-        } catch (fallbackErr) {
-          console.error('Fallback copy failed', fallbackErr);
-        }
+        console.error('Copy failed', err);
+        alert('שגיאה בהעתקה. אנא העתיקו ידנית: ' + ipValue);
       }
     });
   }
@@ -62,7 +41,7 @@
 
   // Device detection functions
   function detectDeviceType() {
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const ua = navigator.userAgent || '';
     
     if (/tablet|ipad|playbook|silk/i.test(ua)) {
       return 'טאבלט';
@@ -74,7 +53,7 @@
   }
 
   function detectBrowser() {
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const ua = navigator.userAgent || '';
     
     if (ua.indexOf('Edg') > -1) {
       return 'Microsoft Edge';
@@ -98,7 +77,7 @@
   }
 
   function detectOperatingSystem() {
-    const ua = navigator.userAgent || navigator.platform;
+    const ua = navigator.userAgent || '';
     
     if (ua.indexOf('Win') > -1) {
       if (ua.indexOf('Windows NT 10.0') > -1) return 'Windows 10/11';
