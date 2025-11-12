@@ -2,8 +2,10 @@
 <html lang="he">
   <head>
     <meta name="google-site-verification" content="g8O3_bgixmMs8ICVXeiNqEbZn5rXTxTWrAmD6I72TaQ" />
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3962742647569998"
      crossorigin="anonymous"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IP Finder</title>
@@ -27,7 +29,7 @@
 
     <main class="hero">
       <section class="ip-card">
-        <p class="eyebrow">מה ה-IP שלי?</p>
+        <p class="eyebrow">הכתובת שלך כרגע</p>
         <div class="ip-row">
           <h1 id="ip-address">—</h1>
           <button class="copy-domain" type="button" aria-label="העתקת הדומיין">
@@ -40,6 +42,21 @@
           </button>
         </div>
         <p class="subtext">מביאים לך שקיפות ברשת, בזמן אמת.</p>
+        
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="info-label">סוג מכשיר</span>
+            <span class="info-value" id="device-type">—</span>
+          </div>
+          <div class="info-card">
+            <span class="info-label">דפדפן</span>
+            <span class="info-value" id="browser">—</span>
+          </div>
+          <div class="info-card">
+            <span class="info-label">מערכת הפעלה</span>
+            <span class="info-value" id="operating-system">—</span>
+          </div>
+        </div>
       </section>
 
       <section class="info">
@@ -87,6 +104,10 @@
     <footer class="site-footer">
       <small>© <span id="year"></span> IP Finder. כל הזכויות שמורות.</small>
     </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
     <script src="script.js"></script>
   </body>
